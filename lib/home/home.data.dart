@@ -1,4 +1,3 @@
-// import 'package:states_rebuilder/states_rebuilder.dart';
 part of '_index.dart';
 
 class HomeData {

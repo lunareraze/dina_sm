@@ -1,10 +1,3 @@
-// import 'package:dina_sm/home/home.ctrl.dart';
-// import 'package:dina_sm/home/home.data.dart';
-// import 'package:flutter/material.dart';
-// import 'package:states_rebuilder/states_rebuilder.dart';
-
-// final _ct = HomeCtrl();
-
 part of '_index.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,6 +10,7 @@ class HomeView extends StatelessWidget {
         title: const Text('Home'),
         backgroundColor: Colors.grey,
       ),
+      // floatingActionButton: ,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
