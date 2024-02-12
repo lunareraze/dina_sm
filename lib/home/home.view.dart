@@ -1,11 +1,9 @@
+import 'package:dina_sm/home/home.data.dart';
 import 'package:flutter/material.dart';
-import 'package:states_rebuilder/scr/state_management/extensions/type_extensions.dart';
-import 'package:states_rebuilder/scr/state_management/rm.dart';
+import 'package:states_rebuilder/states_rebuilder.dart';
 
-class HomeView extends ReactiveStatelessWidget {
-  HomeView({super.key});
-
-  final count = 0.inj();
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +16,18 @@ class HomeView extends ReactiveStatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              count.state.toString(),
-              textScaler: const TextScaler.linear(1.5),
+            OnReactive(
+              () => Text(
+                count.state.toString(),
+                textScaler: const TextScaler.linear(1.5),
+              ),
+            ),
+            OnBuilder(
+              listenTo: count,
+              builder: () => Text(
+                count.state.toString(),
+                textScaler: const TextScaler.linear(1.5),
+              ),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
