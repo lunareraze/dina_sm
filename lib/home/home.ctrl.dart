@@ -1,5 +1,7 @@
-import 'package:dina_sm/home/home.data.dart';
+part of '_index.dart';
 
-tambah() {
-  rxCount.state = rxCount.state + 5;
+class HomeCtrl {
+  void tambah() {
+    _dt.rxCount.state = _dt.rxCount.state + 5;
+  }
 }

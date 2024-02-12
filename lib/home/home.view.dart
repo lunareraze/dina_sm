@@ -1,7 +1,11 @@
-import 'package:dina_sm/home/home.ctrl.dart';
-import 'package:dina_sm/home/home.data.dart';
-import 'package:flutter/material.dart';
-import 'package:states_rebuilder/states_rebuilder.dart';
+// import 'package:dina_sm/home/home.ctrl.dart';
+// import 'package:dina_sm/home/home.data.dart';
+// import 'package:flutter/material.dart';
+// import 'package:states_rebuilder/states_rebuilder.dart';
+
+// final _ct = HomeCtrl();
+
+part of '_index.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -19,21 +23,21 @@ class HomeView extends StatelessWidget {
           children: [
             OnReactive(
               () => Text(
-                rxCount.state.toString(),
+                _dt.rxCount.state.toString(),
                 textScaler: const TextScaler.linear(1.5),
               ),
             ),
             OnBuilder(
-              listenTo: rxCount,
+              listenTo: _dt.rxCount,
               builder: () => Text(
-                rxCount.state.toString(),
+                _dt.rxCount.state.toString(),
                 textScaler: const TextScaler.linear(1.5),
               ),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
               onPressed: () {
-                tambah();
+                _ct.tambah();
               },
               child: const Text('Tambah'),
             )

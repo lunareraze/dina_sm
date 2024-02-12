@@ -1,3 +1,6 @@
-import 'package:states_rebuilder/states_rebuilder.dart';
+// import 'package:states_rebuilder/states_rebuilder.dart';
+part of '_index.dart';
 
-final rxCount = 0.inj();
+class HomeData {
+  var rxCount = RM.inject<int>(() => 0);
+}

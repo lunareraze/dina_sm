@@ -1,4 +1,4 @@
-import 'package:dina_sm/home/home.view.dart';
+import 'package:dina_sm/home/_index.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
-      home: HomeView(),
+      home: const HomeView(),
     );
   }
 }
