@@ -47,13 +47,15 @@ class HomeView extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 50),
-            // IconButton(
-            //   onPressed: () {},
-            //   icon: const Icon(
-            //     SimpleIcons.github,
-            //     size: 30,
-            //   ),
-            // ),
+            IconButton(
+              onPressed: () {
+                html.window.open('https://github.com/lunareraze/dina_sm', 'git hub');
+              },
+              icon: const Icon(
+                SimpleIcons.github,
+                size: 30,
+              ),
+            ),
           ],
         ),
       ),
