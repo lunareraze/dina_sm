@@ -1,3 +1,4 @@
+import 'package:dina_sm/home/home.ctrl.dart';
 import 'package:dina_sm/home/home.data.dart';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
@@ -18,21 +19,21 @@ class HomeView extends StatelessWidget {
           children: [
             OnReactive(
               () => Text(
-                count.state.toString(),
+                rxCount.state.toString(),
                 textScaler: const TextScaler.linear(1.5),
               ),
             ),
             OnBuilder(
-              listenTo: count,
+              listenTo: rxCount,
               builder: () => Text(
-                count.state.toString(),
+                rxCount.state.toString(),
                 textScaler: const TextScaler.linear(1.5),
               ),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
               onPressed: () {
-                count.state = count.state + 3;
+                tambah();
               },
               child: const Text('Tambah'),
             )
